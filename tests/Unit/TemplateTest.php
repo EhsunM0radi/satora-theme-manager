@@ -1,10 +1,10 @@
 <?php
 
 use Webkul\ThemeManager\Contracts\Template as TemplateContract;
-use Webkul\ThemeManager\Templates\Fashion;
 use Webkul\ThemeManager\Templates\Electronics;
-use Webkul\ThemeManager\Templates\Grocery;
+use Webkul\ThemeManager\Templates\Fashion;
 use Webkul\ThemeManager\Templates\General;
+use Webkul\ThemeManager\Templates\Grocery;
 
 // ── Template Contract Tests ──
 

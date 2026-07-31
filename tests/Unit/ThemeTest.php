@@ -1,9 +1,9 @@
 <?php
 
 use Webkul\ThemeManager\Contracts\Theme as ThemeContract;
+use Webkul\ThemeManager\Themes\Colorful;
 use Webkul\ThemeManager\Themes\MinimalLuxury;
 use Webkul\ThemeManager\Themes\ModernDark;
-use Webkul\ThemeManager\Themes\Colorful;
 
 // ── Theme Contract Tests ──
 

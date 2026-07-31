@@ -1,8 +1,8 @@
 <?php
 
+use Webkul\ThemeManager\Database\Seeders\ThemeAndTemplateSeeder;
 use Webkul\ThemeManager\Models\Template;
 use Webkul\ThemeManager\Repositories\TemplateRepository;
-use Webkul\ThemeManager\Database\Seeders\ThemeAndTemplateSeeder;
 
 // ── Template Repository Tests ──
 
