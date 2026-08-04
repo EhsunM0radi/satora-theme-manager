@@ -1,14 +1,27 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Webkul\ThemeManager\Database\Seeders\ThemeAndTemplateSeeder;
-use Webkul\User\Models\Admin;
-
 // ── Admin Theme + Template Controller Integration ──
 // Tests POST behavior (config writes) — the real integration surface.
 // View rendering requires deeper admin theme wiring; tested manually.
 
+use Webkul\User\Models\Admin;
+
 beforeEach(function () {
     $this->seed(ThemeAndTemplateSeeder::class);
+    // Ensure Administrator role exists (Admin factory needs role_id=1)
+    if (! DB::table('roles')->where('id', 1)->exists()) {
+        DB::table('roles')->insert([
+            'id' => 1,
+            'name' => 'Administrator',
+            'description' => 'Administrator role',
+            'permission_type' => 'all',
+            'permissions' => null,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+    }
     $admin = Admin::first() ?? Admin::factory()->create();
     $this->actingAs($admin, 'admin');
 });
